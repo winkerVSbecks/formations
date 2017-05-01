@@ -20,7 +20,13 @@ export const Pitch = compose(
 
 function dimensions({ w, h, ...props}) {
   return {
-    style: { width: `${w}vh`, height: `${h}vh` },
+    style: {
+      width: `${w}vh`,
+      height: `${h}vh`,
+      display: 'grid',
+      gridTemplateRows: `repeat(14, ${h / 14}vh)`,
+      gridTemplateColumns: `repeat(4, auto)`,
+    },
     ...props,
   };
 }
