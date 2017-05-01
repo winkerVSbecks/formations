@@ -1,0 +1,23 @@
+{
+  "name": "formations",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "ramda": "^0.23.0",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "recompose": "^0.23.1",
+    "tachyons": "^4.7.1",
+    "tachyons-measured": "^1.0.3"
+  },
+  "devDependencies": {
+    "cross-env": "^4.0.0",
+    "react-scripts": "0.9.5"
+  },
+  "scripts": {
+    "start": "cross-env NODE_PATH=./src react-scripts start",
+    "build": "cross-env NODE_PATH=./src react-scripts build",
+    "test": "cross-env NODE_PATH=./src react-scripts test --env=jsdom",
+    "eject": "cross-env NODE_PATH=./src react-scripts eject"
+  }
+}
