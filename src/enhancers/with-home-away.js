@@ -1,7 +1,5 @@
-import { mapProps } from 'recompose';
-
-export const withHomeAway = mapProps((type) => {
-  return {
+export const withHomeAway = fn => (type, color = 'gold') => {
+  return fn({
     near: type === 'home' ? 'self-end' : 'self-start',
     far: type === 'home' ? 'self-start' : 'self-end',
     left: type === 'home' ? 'self-justify-start' : 'self-justify-end',
@@ -9,5 +7,6 @@ export const withHomeAway = mapProps((type) => {
     dir: type === 'home' ? -1 : 1,
     center: 'self-justify-center',
     middle: 'self-center',
-  };
-});
+    color,
+  });
+};

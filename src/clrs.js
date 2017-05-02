@@ -1,6 +1,6 @@
 export default [
+  'candy-apple',
   'iguana-green',
-  'gold',
   'dark-liver',
   'dark-red',
   'red',

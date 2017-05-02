@@ -10,7 +10,7 @@ import clrs from 'clrs';
 
 export const Pitch = compose(
   withDefaults({
-    bg: 'iguana-green',
+    bg: 'green',
   }),
   withSpacing,
   withBackgroundColor(clrs),
