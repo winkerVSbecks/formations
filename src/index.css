@@ -27,3 +27,29 @@
 
 .hover-bg-dark-liver:hover,
 .hover-bg-dark-liver:focus { background-color: #503F2F; }
+
+.candy-apple { color: #DF0F2F; }
+.bg-candy-apple { background-color: #DF0F2F; }
+.b--candy-apple { border-color: #DF0F2F; }
+
+.hover-candy-apple:hover,
+.hover-candy-apple:focus { color: #DF0F2F; }
+
+.hover-bg-candy-apple:hover,
+.hover-bg-candy-apple:focus { background-color: #DF0F2F; }
+
+.jet { color: #2F2F2F; }
+.bg-jet { background-color: #2F2F2F; }
+.b--jet { border-color: #2F2F2F; }
+
+.hover-jet:hover,
+.hover-jet:focus { color: #2F2F2F; }
+
+.hover-bg-jet:hover,
+.hover-bg-jet:focus { background-color: #2F2F2F; }
+
+
+.self-justify-start { justify-self: start; }
+.self-justify-end { justify-self: end; }
+.self-justify-center { justify-self: center; }
+.self-justify-stretch { justify-self: stretch; }

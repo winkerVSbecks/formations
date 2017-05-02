@@ -1,3 +1,8 @@
-import { withMeasured } from 'tachyons-measured';
+import { compose, withMeasured } from 'tachyons-measured';
 import clrs from 'clrs';
-export const Block = withMeasured(clrs)('div');
+import { asGridItem } from 'enhancers';
+
+export const Block = compose(
+  withMeasured(clrs),
+  asGridItem,
+)('div');

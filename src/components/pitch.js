@@ -24,8 +24,8 @@ function dimensions({ w, h, ...props}) {
       width: `${w}vh`,
       height: `${h}vh`,
       display: 'grid',
-      gridTemplateRows: `repeat(14, ${h / 14}vh)`,
-      gridTemplateColumns: `repeat(4, auto)`,
+      gridTemplateRows: `repeat(15, 1fr)`,
+      gridTemplateColumns: `repeat(5, 1fr)`,
     },
     ...props,
   };

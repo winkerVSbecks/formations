@@ -5,6 +5,7 @@
   "dependencies": {
     "ramda": "^0.23.0",
     "react": "^15.5.4",
+    "react-addons-create-fragment": "^15.5.3",
     "react-dom": "^15.5.4",
     "recompose": "^0.23.1",
     "tachyons": "^4.7.1",
