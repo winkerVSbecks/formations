@@ -7,11 +7,15 @@ import { renderFormation } from 'formations';
 const size = 95;
 
 export const App = () => (
-  <Block className="vh-100 flex items-center justify-center" bg="dark-liver">
+  <Block
+    ph={3}
+    bg="dark-liver"
+    className="vh-100 flex items-center mw8 center"
+  >
     <Pitch w={76 * size / 116} h={size} pa={3}>
       { markings }
       { renderFormation(442)('away', 'blue') }
-      { renderFormation(433)('home', 'candy-apple') }
+      { renderFormation(4231)('home', 'candy-apple') }
     </Pitch>
   </Block>
 );

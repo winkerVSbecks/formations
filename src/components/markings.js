@@ -38,8 +38,8 @@ export const markings = createFragment({
   />,
   bottomPAHorizontal: <Line
     w={100} h={1}
-    col="2 / 5" row="-3 / -3"
-    className="self-start"
+    col="2 / 5" row="-3 / -4"
+    className="self-end"
   />,
   bottomPARight: <Line
     w={1} h={100}
