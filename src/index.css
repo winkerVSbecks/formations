@@ -43,3 +43,5 @@
 .self-justify-end { justify-self: end; }
 .self-justify-center { justify-self: center; }
 .self-justify-stretch { justify-self: stretch; }
+
+.rot-45 { transform: rotate(45deg); }

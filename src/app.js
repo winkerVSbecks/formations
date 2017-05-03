@@ -1,5 +1,5 @@
 import React from 'react';
-import { Block, Pitch, markings } from 'components';
+import { Block, Pitch, markings, FormationSelector } from 'components';
 import { renderFormation } from 'formations';
 
 // Old Trafford = 76 x 116;
@@ -9,13 +9,16 @@ const size = 95;
 export const App = () => (
   <Block
     ph={3}
-    bg="dark-liver"
-    className="vh-100 flex items-center mw8 center"
+    bg="light-green"
+    className="vh-100 flex items-center sans-serif"
   >
-    <Pitch w={76 * size / 116} h={size} pa={3}>
-      { markings }
-      { renderFormation(352)('away', 'blue') }
-      { renderFormation(352)('home', 'candy-apple') }
-    </Pitch>
+    <Block className="flex items-center center mw9">
+      <Pitch w={76 * size / 116} h={size} pa={3} mr={6}>
+        { markings }
+        { renderFormation(433)('away', 'blue') }
+        { renderFormation(352)('home', 'candy-apple') }
+      </Pitch>
+      <FormationSelector />
+    </Block>
   </Block>
 );
