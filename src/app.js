@@ -14,8 +14,8 @@ export const App = () => (
   >
     <Pitch w={76 * size / 116} h={size} pa={3}>
       { markings }
-      { renderFormation(442)('away', 'blue') }
-      { renderFormation(4231)('home', 'candy-apple') }
+      { renderFormation(352)('away', 'blue') }
+      { renderFormation(352)('home', 'candy-apple') }
     </Pitch>
   </Block>
 );
