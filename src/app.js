@@ -5,7 +5,6 @@ import { renderFormation } from 'formations';
 import { withState } from 'state';
 
 // Old Trafford = 76 x 116;
-// http://newsimg.bbc.co.uk/media/images/40747000/gif/_40747002_footy_pitch_finale1.gif
 const size = 95;
 
 export const App = withState(injectState(({ state, effects }) => (
