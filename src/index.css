@@ -45,3 +45,19 @@
 .self-justify-stretch { justify-self: stretch; }
 
 .rot-45 { transform: rotate(45deg); }
+
+.ReactModal__Content {
+  transition: all 400ms ease-in-out;
+  transform: translateY(30px);
+  opacity: 0;
+}
+
+.ReactModal__Content--after-open {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.ReactModal__Content--before-close {
+  opacity: 0;
+  transform: translateY(30px);
+}
