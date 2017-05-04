@@ -23,6 +23,7 @@ function dimensions({ w, h, ...props}) {
     style: {
       width: `${w}vh`,
       height: `${h}vh`,
+      maxWidth: '100vw',
       display: 'grid',
       gridTemplateRows: `repeat(15, 1fr)`,
       gridTemplateColumns: `repeat(5, 1fr)`,

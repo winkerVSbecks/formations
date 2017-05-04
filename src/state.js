@@ -1,15 +1,16 @@
+import R from 'ramda';
 import { provideState } from 'freactal';
 
 const initialState =  () => ({
-  home: 352,
-  away: 433,
-  colorSelectorVisible: false,
+  home: { formation: 352, color: 'red' },
+  away: { formation: 433, color: 'blue' },
 });
 
 const effects = {
-  pickHomeFormation: (_, formation) => state => Object.assign({}, state, { home: formation }),
-  pickAwayFormation: (_, formation) => state => Object.assign({}, state, { away: formation }),
-  toggleColorSelector : (_, value) => state => Object.assign({}, state, { colorSelectorVisible: value })
+  pickHomeFormation: (_, formation) => state =>
+    R.assocPath(['home', 'formation'], formation, state),
+  pickAwayFormation: (_, formation) => state =>
+    R.assocPath(['away', 'formation'], formation, state),
 };
 
 export const withState = provideState({ initialState, effects });
