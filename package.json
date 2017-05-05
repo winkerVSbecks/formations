@@ -17,10 +17,13 @@
     "cross-env": "^4.0.0",
     "react-scripts": "0.9.5"
   },
+  "homepage": "http://myname.github.io/formations",
   "scripts": {
     "start": "cross-env NODE_PATH=./src react-scripts start",
     "build": "cross-env NODE_PATH=./src react-scripts build",
     "test": "cross-env NODE_PATH=./src react-scripts test --env=jsdom",
-    "eject": "cross-env NODE_PATH=./src react-scripts eject"
+    "eject": "cross-env NODE_PATH=./src react-scripts eject",
+    "predeploy": "rm -rf dist && npm run build",
+    "deploy": "bash deploy.sh"
   }
 }
