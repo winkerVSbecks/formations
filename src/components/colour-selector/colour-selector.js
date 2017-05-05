@@ -7,7 +7,7 @@ import clrs from 'clrs';
 export const ColourSelector = ({ state, effects, label, onSelect, value, ...props }) => (
   <Block {...props}>
     <Button
-      h={100} w={2}
+      h={2} w={2}
       bg={value}
       onClick={() => effects.toggleVisibility(true)}
     />
