@@ -1,8 +1,10 @@
 import React from 'react';
 import { Block, Button } from 'components';
 import { ColourSelectorModal } from './colour-selector-modal';
+import { ColourChip } from './colour-chip';
+import clrs from 'clrs';
 
-export const ColourSelector = ({ state, effects, label, onSelect, value =  'red', ...props }) => (
+export const ColourSelector = ({ state, effects, label, onSelect, value, ...props }) => (
   <Block {...props}>
     <Button
       h={100} w={2}
@@ -13,8 +15,19 @@ export const ColourSelector = ({ state, effects, label, onSelect, value =  'red'
       isVisible={state.isVisible}
       close={() => effects.toggleVisibility(false)}
       label={label}
-      onSelect={onSelect}
-      value={value}
-    />
+    >
+      {
+        clrs.map((clr, idx) => (
+          <ColourChip
+            colour={clr}
+            key={idx}
+            onClick={() => {
+              onSelect(clr);
+              effects.toggleVisibility(false);
+            }}
+          />
+        ))
+      }
+    </ColourSelectorModal>
   </Block>
 );

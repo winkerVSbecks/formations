@@ -9,6 +9,7 @@ const initialState =  () => ({
 const effects = {
   pickHomeFormation: (_, payload) => state => R.assocPath(['home', 'formation'], payload, state),
   pickHomeColour: (_, payload) => state => R.assocPath(['home', 'colour'], payload, state),
+
   pickAwayFormation: (_, payload) => state => R.assocPath(['away', 'formation'], payload, state),
   pickAwayColour: (_, payload) => state => R.assocPath(['away', 'colour'], payload, state),
 };

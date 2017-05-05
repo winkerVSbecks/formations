@@ -1,9 +1,8 @@
 import React from 'react';
 import { injectState } from 'freactal';
 import { Block, MatchSelector, TeamSelector, FooterBlock } from 'components';
-import { withState } from 'state';
 
-export const Controls = withState(injectState(({ state, effects }) => (
+export const Controls = injectState(({ state, effects }) => (
   <Block
     mv={{ all: 4, l: 0 }}
     w={{ all: 100, l: 5 }}
@@ -28,4 +27,4 @@ export const Controls = withState(injectState(({ state, effects }) => (
     </MatchSelector>
     <FooterBlock pa={3} />
   </Block>
-)));
+));

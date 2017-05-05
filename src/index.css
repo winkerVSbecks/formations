@@ -61,3 +61,7 @@
   opacity: 0;
   transform: translateY(25%);
 }
+
+.ReactModal__Body--open {
+  overflow: hidden;
+}

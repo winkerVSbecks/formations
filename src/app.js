@@ -1,8 +1,9 @@
 import React from 'react';
 import { Block } from 'components';
 import { Stadium, Controls } from 'containers';
+import { withState } from 'state';
 
-export const App = () => (
+export const App = withState(() => (
   <Block
     ph={{ all: 0, l: 3 }}
     mt={3}
@@ -23,4 +24,4 @@ export const App = () => (
 
     </Block>
   </Block>
-);
+));

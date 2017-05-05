@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Heading, Header } from 'components';
+import { Block, Button, Heading, Header } from 'components';
 import Modal from 'react-modal';
 
 const Close = () => (
@@ -15,22 +15,24 @@ const Close = () => (
 
 const modalStyles = {
   content: {
-    maxWidth: '32rem',
+    maxWidth: '36rem',
     marginLeft: 'auto',
     marginRight: 'auto',
     padding: 0,
-    borderColor: '#555',
+    borderColor: '#333',
+    borderWidth: '0.25rem',
+    borderRadius: 0,
   },
 };
 
-export const ColourSelectorModal = ({ isVisible, close, label, onSelect, value }) => (
+export const ColourSelectorModal = ({ isVisible, close, label, children }) => (
   <Modal
     isOpen={isVisible}
     closeTimeoutMS={300}
     contentLabel={label}
     style={modalStyles}
   >
-    <Header bg="mid-gray" color="white" className="flex items-stretch">
+    <Header bg="dark-gray" color="white" className="flex items-stretch">
       <Heading
         f={5} pl={3} pv={3} mv={0}
         className="flex-auto fw8 ttu tracked">
@@ -42,5 +44,17 @@ export const ColourSelectorModal = ({ isVisible, close, label, onSelect, value }
         <Close />
       </Button>
     </Header>
+
+    <Block
+      pa={3}
+      style={{
+        display: 'grid',
+        gridTemplateColumns: 'repeat(auto-fill,minmax(4rem, 1fr))',
+        gridAutoRows: 'minmax(4rem, auto)',
+        gridAutoFlow: 'dense',
+      }}
+    >
+      { children }
+    </Block>
   </Modal>
 );
