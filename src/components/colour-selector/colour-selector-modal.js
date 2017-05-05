@@ -33,7 +33,7 @@ export const ColourSelectorModal = ({ isVisible, close, label, onSelect, value }
     <Header bg="mid-gray" color="white" className="flex items-stretch">
       <Heading
         f={5} pl={3} pv={3} mv={0}
-        className="flex-auto fw4 ttu tracked">
+        className="flex-auto fw8 ttu tracked">
         { label }
       </Heading>
 

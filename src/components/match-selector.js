@@ -1,5 +1,5 @@
 import React from 'react';
-import { Form, Fieldset, Legend, FormationSelector } from 'components';
+import { Form, Fieldset, Legend, TeamSelector } from 'components';
 
 export const MatchSelector = ({ home, away, onSelectAway, onSelectHome, ...props }) => (
   <Form
@@ -11,20 +11,25 @@ export const MatchSelector = ({ home, away, onSelectAway, onSelectHome, ...props
     {...props}
   >
     <Fieldset pv={4} ph={{ all: 4, l: 3 }} mh={0} ba="mid-gray" bw={2}>
-
-      <Legend f={5} ph={2} mh={0} className="ttu tracked fw8">formations</Legend>
-
-      <FormationSelector
-        name="🛫‍‍ away"
+      <Legend
+        f={5}
+        ph={2}
+        mh={0}
+        className="ttu tracked fw8">
+        formations
+      </Legend>
+      <TeamSelector
+        name="away"
+        symbol="🛫‍‍"
         onSelect={onSelectAway}
-        value={away}
+        team={away}
         mb={4}
       />
-
-      <FormationSelector
-        name="🏠 home"
+      <TeamSelector
+        name="home"
+        symbol="🏠"
         onSelect={onSelectHome}
-        value={home}
+        team={home}
       />
     </Fieldset>
   </Form>
