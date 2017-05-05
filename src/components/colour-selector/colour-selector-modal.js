@@ -22,6 +22,7 @@ const modalStyles = {
     borderColor: '#333',
     borderWidth: '0.25rem',
     borderRadius: 0,
+    boxShadow: '0 0 8px 2px rgba(0, 0, 0, 0.2)',
   },
 };
 

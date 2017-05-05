@@ -1,8 +1,8 @@
 import React from 'react';
-import { Block } from 'components';
+import { Block, Text } from 'components';
 
-export const Player = ({ ...props }) => (
-  <Block {...props}>
+export const Player = ({ className, ...props }) => (
+  <Block className={`${className} relative pointer hide-child`} {...props}>
     <svg
       viewBox="0 0 40 40"
       preserveAspectRatio="none"
@@ -17,6 +17,16 @@ export const Player = ({ ...props }) => (
         rx="4" ry="4"
       />
     </svg>
-    <div>PROPS!</div>
+    <Text
+      ma={0}
+      pa={2}
+      bg="mid-gray" color="white"
+      radius={1}
+      lh="solid" f={6}
+      className="tc absolute z-999 shadow-2 tooltip code child pointer-none"
+    >
+      <span className="db mb1">{ `col: ${props.col}` }</span>
+      { `row: ${props.row}` }
+    </Text>
   </Block>
 );
