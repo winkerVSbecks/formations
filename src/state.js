@@ -4,6 +4,7 @@ import { provideState } from 'freactal';
 const initialState =  () => ({
   home: { formation: 433, colour: 'light-red' },
   away: { formation: 352, colour: 'blue' },
+  debug: false,
 });
 
 const effects = {
@@ -12,6 +13,8 @@ const effects = {
 
   pickAwayFormation: (_, payload) => state => R.assocPath(['away', 'formation'], payload, state),
   pickAwayColour: (_, payload) => state => R.assocPath(['away', 'colour'], payload, state),
+
+  toggleDebug: () => state => R.assocPath(['debug',], !state.debug, state),
 };
 
 export const withState = provideState({ initialState, effects });

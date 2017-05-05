@@ -1,6 +1,6 @@
 import React from 'react';
 import { injectState } from 'freactal';
-import { Pitch, markings } from 'components';
+import { Pitch, markings, debugLines } from 'components';
 import { renderFormation } from 'formations';
 
 // Old Trafford = 76 x 116;
@@ -14,5 +14,6 @@ export const Stadium = injectState(({ state, effects }) => (
     { markings }
     { renderFormation(state.away.formation)('away', state.away.colour) }
     { renderFormation(state.home.formation)('home', state.home.colour) }
+    { state.debug ? debugLines : null }
   </Pitch>
 ));
