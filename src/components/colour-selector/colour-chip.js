@@ -1,6 +1,13 @@
 import React from 'react';
-import { Block } from 'components';
+import { Button } from 'components';
 
 export const ColourChip = ({ colour, ...props }) => (
-  <Block bg={colour} className="pointer" { ...props } />
+  <Button
+    w="auto"
+    ma={0}
+    bw={0}
+    bg={colour}
+    className="db pointer"
+    { ...props }
+  />
 );

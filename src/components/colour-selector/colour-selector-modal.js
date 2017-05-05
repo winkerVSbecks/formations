@@ -39,8 +39,7 @@ export const ColourSelectorModal = ({ isVisible, close, label, children }) => (
         { label }
       </Heading>
 
-      <Button
-        onClick={close}>
+      <Button ba="transparent" onClick={close}>
         <Close />
       </Button>
     </Header>

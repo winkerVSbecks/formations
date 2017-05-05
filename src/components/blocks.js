@@ -15,6 +15,7 @@ export const Label = withMeasured(clrs)('label');
 export const Header = withMeasured(clrs)('header');
 export const Select = withMeasured(clrs)('select');
 export const Footer = withMeasured(clrs)('footer');
+export const Text = withMeasured(clrs)('p');
 export const Link = compose(
   withBaseStyles('link'),
   withMeasured(clrs)
@@ -27,7 +28,7 @@ export const Heading = withMeasured(clrs)(({ level = 1, ...props }) => {
 
 export const Button = compose(
   withDefaults({
-    bn: true,
+    ba: 'transparent',
     bg: 'transparent',
     pa: 0,
     w: 3,
