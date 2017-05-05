@@ -14,6 +14,11 @@ export const Legend = withMeasured(clrs)('legend');
 export const Label = withMeasured(clrs)('label');
 export const Header = withMeasured(clrs)('header');
 export const Select = withMeasured(clrs)('select');
+export const Footer = withMeasured(clrs)('footer');
+export const Link = compose(
+  withBaseStyles('link'),
+  withMeasured(clrs)
+)('a');
 
 export const Heading = withMeasured(clrs)(({ level = 1, ...props }) => {
   const Tag = `h${level}`;

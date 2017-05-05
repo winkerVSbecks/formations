@@ -1,11 +1,10 @@
 import React from 'react';
-import { Form, Fieldset, Legend, TeamSelector } from 'components';
+import { Form, Fieldset, Legend } from 'components';
 
-export const MatchSelector = ({ home, away, onSelectAway, onSelectHome, ...props }) => (
+export const MatchSelector = ({ children, ...props }) => (
   <Form
     f={5}
-    w={{ all: 100, l: 5 }}
-    ph={{ all: 3, ns: 0 }}
+    w={100}
     color="mid-gray"
     className="center"
     {...props}
@@ -15,22 +14,11 @@ export const MatchSelector = ({ home, away, onSelectAway, onSelectHome, ...props
         f={5}
         ph={2}
         mh={0}
+        color="light-red"
         className="ttu tracked fw8">
-        formations
+        FORMATIONS
       </Legend>
-      <TeamSelector
-        name="away"
-        symbol="🛫‍‍"
-        onSelect={onSelectAway}
-        team={away}
-        mb={4}
-      />
-      <TeamSelector
-        name="home"
-        symbol="🏠"
-        onSelect={onSelectHome}
-        team={home}
-      />
+      { children }
     </Fieldset>
   </Form>
 );

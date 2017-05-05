@@ -1,7 +1,14 @@
 import React from 'react';
 import { Block, Legend, ColourSelector, FormationSelector } from 'components';
 
-export const TeamSelector = ({ symbol, name, onSelect, team, ...props }) => (
+export const TeamSelector = ({
+  symbol,
+  name,
+  onSelectFormation,
+  onSelectColour,
+  team,
+  ...props,
+}) => (
   <Block {...props}>
     <Legend
       className="db fw8 ttu tracked"
@@ -17,10 +24,11 @@ export const TeamSelector = ({ symbol, name, onSelect, team, ...props }) => (
         label={`${name} team color`}
         mr={3}
         value={team.colour}
+        onSelect={onSelectColour}
       />
       <FormationSelector
         name={`${name}-formation`}
-        onSelect={onSelect}
+        onSelect={onSelectFormation}
         value={team.formation}
       />
     </div>
