@@ -9,12 +9,13 @@ export const MatchSelector = ({ children, ...props }) => (
     className="center"
     {...props}
   >
-    <Fieldset pv={4} ph={{ all: 4, l: 3 }} mh={0} ba="mid-gray" bw={2}>
+    <Fieldset pv={4} ph={{ all: 4, l: 3 }} mh={0} ba="mid-gray" bw={2} bg="near-white">
       <Legend
         f={5}
-        ph={2}
+        pa={2}
         mh={0}
-        color="light-red"
+        color="white"
+        bg="green"
         className="ttu tracked fw8">
         FORMATIONS
       </Legend>

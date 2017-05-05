@@ -13,16 +13,16 @@ export const Controls = withState(injectState(({ state, effects }) => (
       <TeamSelector
         name="away"
         symbol="🛫‍‍"
-        onSelectFormation={effects.pickHomeFormation}
-        onSelectColour={effects.pickHomeColour}
+        onSelectFormation={effects.pickAwayFormation}
+        onSelectColour={effects.pickAwayColour}
         team={state.away}
         mb={4}
       />
       <TeamSelector
         name="home"
         symbol="🏠"
-        onSelectFormation={effects.pickAwayFormation}
-        onSelectColour={effects.pickAwayColour}
+        onSelectFormation={effects.pickHomeFormation}
+        onSelectColour={effects.pickHomeColour}
         team={state.home}
       />
     </MatchSelector>

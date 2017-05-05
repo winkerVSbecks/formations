@@ -13,7 +13,7 @@ export const Stadium = withState(injectState(({ state, effects }) => (
     className="order-1 order-0-l"
   >
     { markings }
-    { renderFormation(state.away.formation)('away', 'blue') }
-    { renderFormation(state.home.formation)('home', 'candy-apple') }
+    { renderFormation(state.away.formation)('away', state.away.colour) }
+    { renderFormation(state.home.formation)('home', state.home.colour) }
   </Pitch>
 )));
